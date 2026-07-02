@@ -1,0 +1,22 @@
+name: Generate Linux Visual Baseline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install chromium --with-deps
+      - run: npx playwright test --grep @visual --update-snapshots
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-snapshots
+          path: tests/signup-signin.spec.ts-snapshots/
