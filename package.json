@@ -1,0 +1,27 @@
+{
+  "name": "playwright-bdd-parabank",
+  "version": "1.0.0",
+  "description": "ParaBank registration & login automation — Playwright + TypeScript + BDD (POM)",
+  "author": "Madhushree B. Surpur",
+  "license": "ISC",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:negative": "playwright test --grep @negative",
+    "test:security": "playwright test --grep @security",
+    "test:visual": "playwright test --grep @visual",
+    "test:ui": "playwright test --grep @ui",
+    "test:headed": "playwright test --headed",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:chrome": "playwright test --project=chromium",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
