@@ -1,4 +1,5 @@
 import { Page, Locator } from '@playwright/test';
+import { ENV } from '../config/env';
 
 /**
  * Page Object Model — ParaBank Account Overview page (/overview.htm).
@@ -28,7 +29,7 @@ export class AccountOverviewPage {
    * Added for TC_011 — verifies unauthorized/direct URL access is blocked.
    */
   async goto(): Promise<void> {
-    await this.page.goto('overview.htm');
+    await this.page.goto(`${ENV.BASE_URL}overview.htm`);
   }
 
   /** Returns the balance text of the first account (e.g. "$515.00") */

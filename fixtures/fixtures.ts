@@ -19,16 +19,9 @@ export type LoggedInContext = {
  * Custom fixture types — extend base Playwright test with app-specific fixtures.
  */
 type AppFixtures = {
-  /** RegisterPage instance for the current page */
   registerPage: RegisterPage;
-
-  /** LoginPage instance for the current page */
   loginPage: LoginPage;
-
-  /** AccountOverviewPage instance for the current page */
   accountOverviewPage: AccountOverviewPage;
-
-  /** Compound fixture that registers a new user, logs out, and logs in with the new credentials */
   loggedInPage: LoggedInContext;
 };
 

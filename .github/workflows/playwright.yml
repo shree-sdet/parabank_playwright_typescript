@@ -5,6 +5,7 @@ on:
     branches: [main, master]
   pull_request:
     branches: [main, master]
+  workflow_dispatch:
 
 jobs:
   test:
@@ -29,11 +30,11 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run smoke tests
-        run: npm run test:smoke -- --project=chromium
+        run: npm run test:smoke -- --project=chromium --retries=1
 
       - name: Run full regression suite
         if: success()
-        run: npm test -- --project=chromium
+        run: npm test -- --project=chromium --retries=1
 
       - name: Upload HTML report
         if: always()

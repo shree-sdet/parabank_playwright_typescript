@@ -1,5 +1,6 @@
 import { Page, Locator } from '@playwright/test';
 import { TestUser } from '../test-data/test-data';
+import { ENV } from '../config/env';
 
 /**
  * Page Object Model — ParaBank Registration page.
@@ -68,7 +69,7 @@ export class RegisterPage {
 
   /** Navigate to the ParaBank home page */
   async goto(): Promise<void> {
-    await this.page.goto('index.htm?ConnType=JDBC');
+    await this.page.goto(`${ENV.BASE_URL}index.htm?ConnType=JDBC`);
   }
 
   /** Click the Register link in the navigation panel */

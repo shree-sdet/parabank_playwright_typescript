@@ -1,4 +1,5 @@
 import { Page, Locator } from '@playwright/test';
+import { ENV } from '../config/env';
 
 /**
  * Page Object Model — ParaBank Login panel (visible on the homepage).
@@ -30,7 +31,7 @@ export class LoginPage {
 
   /** Navigate to the ParaBank homepage */
   async goto(): Promise<void> {
-    await this.page.goto('index.htm?ConnType=JDBC');
+    await this.page.goto(`${ENV.BASE_URL}index.htm?ConnType=JDBC`);
   }
 
   /**
