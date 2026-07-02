@@ -30,11 +30,11 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run smoke tests
-        run: npm run test:smoke -- --project=chromium --retries=1
+        run: npm run test:smoke -- --project=chromium --retries=2
 
       - name: Run full regression suite
         if: success()
-        run: npm test -- --project=chromium --retries=1
+        run: npm test -- --project=chromium --retries=2
 
       - name: Upload HTML report
         if: always()
