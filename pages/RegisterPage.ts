@@ -101,12 +101,7 @@ export class RegisterPage {
     await this.registerButton.click();
   }
 
-  /**
-   * Full register flow: navigate → open form → fill → submit.
-   * ✅ Fixed: parameter typed as TestUser, not any.
-   * Callers should NOT call goto() + openRegistrationPage() before this method;
-   * it handles navigation internally.
-   */
+ /** Complete registration flow: navigate, fill form, submit */
   async registerUser(user: TestUser): Promise<void> {
     await this.goto();
     await this.openRegistrationPage();

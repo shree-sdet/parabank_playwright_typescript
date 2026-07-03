@@ -25,8 +25,7 @@ export class AccountOverviewPage {
   }
 
   /**
-   * Navigate directly to the Account Overview page URL, bypassing login.
-   * Added for TC_011 — verifies unauthorized/direct URL access is blocked.
+   * Navigate to the ParaBank Account Overview page.
    */
   async goto(): Promise<void> {
     await this.page.goto(`${ENV.BASE_URL}overview.htm`);
