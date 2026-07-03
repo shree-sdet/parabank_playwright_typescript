@@ -4,7 +4,6 @@
  * All tests follow BDD structure using test.step() with Given / When / Then language.
  * Page interactions are delegated to POM classes (pages/).
  * Repeated setup (register → logout → login) is handled by the loggedInPage fixture,
- * eliminating the duplication that existed in the original code.
  *
  */
 
