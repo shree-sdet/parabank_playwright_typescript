@@ -28,7 +28,7 @@ export function generateTestUser(): TestUser {
     city: 'Bangalore',
     state: 'Karnataka',
     zipCode: '903210',
-    phone: '242423536',
+    phone: '8242423536',
     ssn: '123456789',
     username: `M$hreetestuser${randomSuffix}`,
     password: 'MadhuSePass@123',

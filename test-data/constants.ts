@@ -1,6 +1,4 @@
-/**
- * Centralized constants for the ParaBank test suite.
- */
+/** Centralized constants for the ParaBank test suite. */
 
 /** URL path patterns used across expect(page).toHaveURL(...) assertions. */
 export const URL_PATTERNS = {
@@ -27,10 +25,7 @@ export const ERROR_MESSAGES = {
   CONFIRM_PASSWORD_REQUIRED: 'Password confirmation is required.',
 };
 
-/**
- * Patterns that should NEVER appear in a response — used to assert the app
- * doesn't leak database errors (TC_012, SQL injection).
- */
+/** Regex pattern to detect database error messages in the UI. */
 export const DB_ERROR_LEAK_PATTERN = /SQL syntax|SQLException|ORA-\d+|mysql_fetch|ODBC/i;
 
 /** Hardcoded input data for negative-path tests (deliberately invalid). */
