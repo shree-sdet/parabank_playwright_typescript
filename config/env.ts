@@ -7,6 +7,5 @@ export const ENV = {
   EXISTING_USERNAME: process.env.EXISTING_USERNAME ?? 'john',
   EXISTING_PASSWORD: process.env.EXISTING_PASSWORD ?? 'demo',
 
-  /** Set to 'true' in CI to force headless mode regardless of local defaults. */
   CI: process.env.CI === 'true' || !!process.env.CI,
 };
