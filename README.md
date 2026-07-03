@@ -22,6 +22,7 @@ Automated end-to-end tests for the ParaBank demo application using Playwright, T
 - `package.json` - npm scripts and dependencies.
 - `playwright.config.ts` - Playwright configuration and browser projects.
 - `config/env.ts` - Environment configuration and base URL handling.
+- `docs/` - Supporting documentation, screenshots, and assessment artifacts.
 - `features/` - Gherkin-style feature files.
 - `fixtures/` - Custom Playwright fixtures.
 - `pages/` - Page objects for login, registration, and account overview.
